@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+int main (){
+    int n,ori,rev1 = 0,rev2 = 0;
+    cin>>n;
+
+    ori = n;
+    while(ori>0){
+        int last = ori % 10;
+        rev1 = rev1*10+last;
+        ori /= 10;
+    }
+
+    ori = rev1;
+    while(ori>0){
+        int last = ori % 10;
+        rev2 = rev2*10+last;
+        ori /= 10;
+    }
+
+    if(n==rev2) cout<<1;
+    else cout<<false;
+
+
+
+    return 0;
+}
